@@ -11,6 +11,7 @@ namespace ConsoleApp_NewGit
         static void Main(string[] args)
         {
             Console.WriteLine("This Is Good");
+            Console.WriteLine("This is line 2");
 
         }
     }
