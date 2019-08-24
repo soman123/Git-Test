@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace ConsoleApp_NewGit
 {
@@ -10,8 +12,14 @@ namespace ConsoleApp_NewGit
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("This Is Good");
-            Console.WriteLine("This is line 2");
+            IWebDriver Driver = new ChromeDriver();
+
+            Driver.Navigate().GoToUrl("https://www.google.com");
+
+            IWebElement element = Driver.FindElement(By.Name("q"));
+            element.SendKeys("execute this page");
+           
+       
 
         }
     }
